@@ -19,12 +19,29 @@ function showResults() {
     const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
     // if answer is correct
-    if (userAnswer === currentQuestion.correctAnswer) {
+    if (userAnswer === currentQuestion.correctAnswer) {      
       // add to the number of correct answers
       numCorrect++;
 
       // color the answers green
       //answerContainers[questionNumber].style.color = "lightgreen";
+
+      // If image URLs are provided, display the images
+      if (currentQuestion.correctAnswerImage) {
+          // Find the image container and clear it
+        const imageContainer = answerContainer.nextElementSibling;
+        while (imageContainer.firstChild) {
+          imageContainer.removeChild(imageContainer.firstChild);
+        }
+        // Append the images to the image container
+        currentQuestion.correctAnswerImage.forEach((imageUrl) => {
+          const img = document.createElement("img");
+          img.src = imageUrl;
+          img.height = 300; 
+          img.width = 300; 
+          imageContainer.appendChild(img);
+        });
+      }
     } else {
       // if answer is wrong or blank
       // color the answers red
