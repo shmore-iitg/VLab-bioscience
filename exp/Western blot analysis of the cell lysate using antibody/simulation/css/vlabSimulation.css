@@ -1,0 +1,206 @@
+.container {
+    overflow-y: scroll; /* Always have a vertical scrollbar */
+}
+
+.performingRow {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15); /* Add shadow to the row */
+}
+
+#animation_div, #process_div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    padding: 10px; 
+    border-radius: 10px; 
+    background-color: #f5f5f5;     
+}
+
+#animation_div {
+    width: 70%;    
+}
+
+#process_div {
+    width: 30%;
+}
+
+#title_div {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: #242323; /* Change the color to match the buttons */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+#buttons_div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#next-end-button, #prev-button{
+    flex-grow: 1; /* Make the buttons grow to fill the space */
+    margin: 0 5px; /* Add some space around the buttons */
+    background-color: #2c99ce;
+    color: #fff;
+    width: auto;     
+    height: 50px;
+    border: none; /* Remove the default border */
+    border-radius: 5px; /* Round the corners */
+    font-size: 20px; /* Increase the font size */
+    cursor: pointer; /* Change the cursor when hovering over the buttons */
+}
+
+#stepSelect {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    appearance: none; /* Remove default styles */
+    -webkit-appearance: none; /* Remove default styles for Chrome and Safari */
+    -moz-appearance: none; /* Remove default styles for Firefox */
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+#stepSelect:focus {
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+    border-color: #2c99ce;
+}
+
+#next-end-button:hover, #prev-button:hover, #stepSelect:hover {
+    background-color: #2388a6; /* Darken the background color when hovering over the buttons */
+}
+
+.controlPanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px; 
+    margin-top: 20px; 
+    padding: 20px; /* Add padding */
+    background-color: #f5f5f5; /* Add a light background color */
+    border-radius: 10px; /* Round the corners */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15); /* Add shadow to the panel */
+}
+
+#tooltip-container {
+    position: absolute;
+    display: none;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    z-index: 1;
+}
+
+#tooltip-container .tooltip-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+#tooltip-container .tooltip-column {
+    flex: 1;
+}
+
+#tooltip-container .tooltip-column img {
+    width: 40%;
+    height: auto;
+}
+
+#tooltip-container .close-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#tooltip-container .close-button:hover {
+    background-color: #f44336;
+}
+
+#tooltip-image {    
+    object-fit: contain;
+    height: auto;
+    display: block;
+    margin: auto; 
+}
+
+.tooltip-icon {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+@media screen and (max-width: 600px) {
+    #tooltip-container {
+        flex-direction: column;
+        font-size: 12px;
+    }
+    #close-tooltip {            
+        text-align: center;
+        height: 5px;
+        line-height: 5px; /* This should be the same as the button's height */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tooltip-row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .performingRow {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .controlPanel {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px 0;
+        z-index: 1;
+    }
+
+    .controlPanel button, .controlPanel select {
+        flex: 1 0 auto; 
+        margin: 5px;
+        text-align: center;
+    }
+}
+
+#icon_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+@media (max-width: 600px) {
+    #procedure_div {
+        font-size: 14px; /* Adjust this value as needed */
+    }
+}

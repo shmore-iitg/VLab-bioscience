@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -54,7 +55,7 @@
     <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
     <link rel="stylesheet" href="./assets/css/vlabs-style.css">
-    <link rel="stylesheet" href="./assets/css/vlab_simulation.css">
+    <link rel="stylesheet" href="./simulation/css/vlabSimulation.css">
 
     <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
@@ -79,6 +80,33 @@
             font-weight: 800;
         }
     </style>
+    <!-- <style>
+        @media screen and (max-width: 600px) {
+            .container {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .nav-menu-body a {
+                padding: 1rem;
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            #animation_div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+        @media screen and (max-width: 600px) {
+            #procedure_div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        }
+    }
+    </style> -->
 </head>
 
 <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
@@ -280,70 +308,64 @@
                         <div class="expand-1">
                         </div>
                     </header>
-                    <div id="simulation_page">
-                        <div id="left_side_content">
-                            <button id="prev_button">Previous Step</button>
-                        </div> <!-- ends left_side_content -->                        
-                        <div id="screen_platform">
-                            <div id="animation_container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>                           
-                        </div> <!-- ends screen_platform -->
-                        <div id="right_side_content">
-                            <div id="exp_part_container">
-                                <h3 id="exp_part_header">Part 1 : Sample Preparation</h3>         
-                            </div>
-                            <div id="tooltip_container" style="display: none;">
-                                <img id="tooltip_image" src="" alt="Tooltip Image">
-                                <p id="tooltip_text"></p>
-                                <button id="tooltip_close">X</button>
-                            </div> <!-- ends tooltip_container -->                             
-                            <div id="icons_container">            
-                              <p>Drag and drop to the left square</p>
-                              <div class="icons">
-                                <!-- Icons will be inserted here by JavaScript -->
-                              </div> <!-- ends icons -->
-                            </div> <!-- ends icons_container -->                           
-                            <div id="procedure_container">            
-                                <ol>                  
-                                        <li><span>1. Clean the workbench</span></li>
-                                        <li><span>2. Discard the media</span></li>
-                                        <li><span>3. Adjust pipette to measure 400 µL of PBS</span></li>
-                                        <li><span>4. Add PBS over the cells</span></li>                                    
-                                        <li><span>5. Shake the dish</span></li>                          
-                                        <li><span>6. Discard the PBS</span></li>
-                                        <li><span>7. Repeat steps 3, 4, 5 and 6</span></li>
-                                        <li><span>8. Transfer cells to microcentrifuge tubes</span></li>                                    
-                                        <li><span>9. Set up the centrifuge</span></li>
-                                        <li><span>10. Centrifuge the samples at 12000g for 5 minutes at 4°C</span></li>
-                                        <li><span>11. Transfer the microcentrifuge tubes</span></li>
-                                        <li><span>12. Discard the PBS</span></li>
-                                        <li><span>13. Add marker to the microcentrifuge tubes</span></li>
-                                        <li><span>14. Mix the marker with the cell pellet</span></li>
-                                        <li><span>15. Set up heat block</span></li>
-                                        <li><span>16. Boil the above mixture</span></li>
-                                        <li><span>17. Set up the centrifuge</span></li>
-                                        <li><span>18. Centrifuge the samples at 12000g for 5 minutes at 4°C</span></li>
-                                </ol>
-                            </div> <!-- ends procedure_container -->   
-                            <button id="next_button"></button>
-                            <div class="thumbnail_container">                                
-                                <button id="thumbnail_button1" class="thumbnail_button"><img src="./assets/images/button_flask.png" alt="Flask"></button>
-                                <button id="thumbnail_button2" class="thumbnail_button"><img src="./assets/images/button_petri_dish.png" alt="Petri Dish"></button>
-                                <button id="thumbnail_button3" class="thumbnail_button"><img src="./assets/images/button_pipette.png" alt="Pipette"></button>
-                                <button id="thumbnail_button4" class="thumbnail_button"><img src="./assets/images/button_PBS.png" alt="PBS"></button>
-                                <button id="thumbnail_button5" class="thumbnail_button"><img src="./assets/images/button_vial.png" alt="Vial"></button>
-                                <button id="thumbnail_button6" class="thumbnail_button"><img src="./assets/images/button_scraper.png" alt="Scraper"></button>
-                            </div> <!-- ends thumbnail_container -->                            
-                        </div> <!-- ends right_side_content -->
-                    </div> <!-- ends simulation_page -->    
-                </div>
+                    <div class="container">                        
+                        <div class="performingRow">
+                            <div id="animation_div"></div>                        
+                            <div id="process_div">
+                                <div id="title_div"></div>
+                                <div id="select_step_div">
+                                    <select id="stepSelect">
+                                        <option value="" selected>Choose Step</option>
+                                        <option value="0">Step 1</option>
+                                        <option value="19">Step 2</option>
+                                        <option value="30">Step 3</option>
+                                        <option value="41">Step 4</option>
+                                        <option value="49">Step 5</option>
+                                        <option value="57">Step 6</option>
+                                    </select>
+                                </div> <!-- ends select_step_div -->
+                                <div id="procedure_div">
+                                </div> <!-- ends procedure_div -->
+                                <div id="buttons_div">
+                                    <button id="prev-button">Previous Step</button>                                                        
+                                    <button id="next-end-button">Next Step</button>                                            
+                                </div>
+                            </div> <!-- ends process_div -->
+                            <div id="tooltip-container" style="display: none;">
+                                <button id="close-tooltip" class="close-button">X</button>
+                                <div class="tooltip-row">
+                                    <div class="tooltip-column"><img id="tooltip-image" alt="Icon"></div>
+                                    <div class="tooltip-column"><span id="tooltip-text"></span></div>
+                                </div>
+                            </div>  <!-- ends tooltip-container -->
+                        </div>  <!-- ends performingRow -->
+                        <div class="controlPanel">                            
+                            <button id="extra-button">Extra</button>
+                            <div id="icon_container" style="display: none;">
+                                <img id="button_flask" src="./simulation/images/button_flask.png" class="tooltip-icon" data-tooltip="Flask">
+                                <img id="button_pbs" src="./simulation/images/button_PBS.png" class="tooltip-icon" data-tooltip="PBS">
+                                <img id="button_petri_dish" src="./simulation/images/button_petri_dish.png" class="tooltip-icon" data-tooltip="Petri Dish">
+                                <img id="button_pipette" src="./simulation/images/button_pipette.png" class="tooltip-icon" data-tooltip="Pipette">
+                                <img id="button_cell_scraper" src="./simulation/images/button_scraper.png" class="tooltip-icon" data-tooltip="Scraper">
+                                <img id="button_vial" src="./simulation/images/button_vial.png" class="tooltip-icon" data-tooltip="Vial">
+                                <button id="close-icon-container">X</button>
+                            </div> <!-- ends icon_container -->                             
+                        </div>  <!-- ends controlPanel -->
+                    </div>  <!-- ends container -->
+                </div>                
             </div>
         </div>
     </div>
 
     <script src="./assets/js/toggleSidebar.js"></script> 
-    <script src="./assets/js/vlab_procedure.js"></script>
-    <script src="./assets/js/vlab_drag_and_drop.js"></script>   
-    <script src="./assets/js/vlab_simulation.js"></script>    
-    <script src="./assets/js/vlab_thumbnail_tooltip.js"></script>  
+    
+    
+    <script type="module" src="./simulation/js/title.js"></script>
+    <script type="module" src="./simulation/js/animation.js"></script>
+    <script type="module" src="./simulation/js/procedure.js"></script>    
+    <script type="module" src="./simulation/js/tooltip.js"></script>
+    <script type="module" src="./simulation/js/vlabSimulation.js"></script>   
+     
+
 </body>
 </html>
