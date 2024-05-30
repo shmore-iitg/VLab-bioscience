@@ -1,0 +1,78 @@
+let currentAnimation = 0;
+const animations = Array.from({length: 21}, (_, i) => `./simulation/json/${i+1}_Day_${i+1}.json`);
+let animationInstance = null;
+
+document.getElementById('prev').style.display = 'none';
+
+document.getElementById('start').addEventListener('click', () => {
+    loadAnimation();
+    document.getElementById('start').style.display = 'none';
+    document.getElementById('play-all').style.display = 'inline-block';
+    document.getElementById('next').style.display = 'inline-block';
+    // Do not display the Previous button yet
+});
+
+document.getElementById('play-all').addEventListener('click', () => {
+    playAllAnimations();
+});
+
+
+document.getElementById('next').addEventListener('click', () => {
+    currentAnimation = (currentAnimation + 1) % animations.length;
+    console.log(`Next clicked Loading animation ${currentAnimation}`); // Log when the 'Next' button is clicked
+    loadAnimation(); // Load and play the current animation
+
+    // Display the 'Prev' button when the 'Next' button is clicked for the first time
+    document.getElementById('prev').style.display = 'inline-block';
+});
+
+
+document.getElementById('prev').addEventListener('click', () => {
+    currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;    
+    loadAnimation(); // Load and play the current animation
+});
+
+function loadAnimation() {
+    if(animationInstance) {
+        animationInstance.destroy();
+    }
+    animationInstance = lottie.loadAnimation({
+        container: document.getElementById('simulation_container'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: animations[currentAnimation]
+    });
+    animationInstance.setSpeed(0.75); // Reduce the speed of the animation to 75% of the original speed
+    // If the current animation is the last one, hide the Next button
+    if (currentAnimation === animations.length - 1) {
+        document.getElementById('next').style.display = 'none';
+    } else {
+        document.getElementById('next').style.display = 'inline-block';
+    }    
+}
+
+function playAllAnimations() {
+    currentAnimation = 0;
+    playAnimation(currentAnimation);
+}
+
+function playAnimation(index) {
+    return new Promise((resolve, reject) => {
+        loadAnimation();
+        animationInstance.addEventListener('complete', () => {
+            console.log(`Animation ${index} completed`); // Log when an animation completes
+            resolve();
+        });
+    }).then(() => {
+        if (currentAnimation < animations.length - 1) {
+            currentAnimation++;            
+            playAnimation(currentAnimation);
+        }
+    }).finally(() => {
+        // If all animations have completed, display the 'Prev' button
+        if (currentAnimation === animations.length - 1) {
+            document.getElementById('prev').style.display = 'inline-block';
+        }
+    });
+}
