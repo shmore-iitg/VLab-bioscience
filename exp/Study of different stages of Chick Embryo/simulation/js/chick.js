@@ -20,7 +20,7 @@ const titles = ['Embryo development',
                 'Chick start breathing air from Air cell',
                 'Head tucks between leg',
                 'Chick occipies almost entire egg + Movement increase for hatching',
-                'Informal pipping and ___ respiration begins',
+                'Informal pipping and lung respiration begins',
                 'External piping begins',
                 'Chick hatches from the egg'];
 
