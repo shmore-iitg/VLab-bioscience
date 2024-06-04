@@ -19,11 +19,16 @@ document.getElementById('play-all').addEventListener('click', () => {
 
 document.getElementById('next').addEventListener('click', () => {
     currentAnimation = (currentAnimation + 1) % animations.length;
-    console.log(`Next clicked Loading animation ${currentAnimation}`); // Log when the 'Next' button is clicked
+    //console.log(`Next clicked Loading animation ${currentAnimation}`); // Log when the 'Next' button is clicked
     loadAnimation(); // Load and play the current animation
 
     // Display the 'Prev' button when the 'Next' button is clicked for the first time
     document.getElementById('prev').style.display = 'inline-block';
+
+    // If currentAnimation has reached the end of the animations array, change the button text to 'End'
+    if (currentAnimation === animations.length - 1) {
+        document.getElementById('next').textContent = 'End';
+    }
 });
 
 
@@ -43,13 +48,7 @@ function loadAnimation() {
         autoplay: true,
         path: animations[currentAnimation]
     });
-    animationInstance.setSpeed(0.75); // Reduce the speed of the animation to 75% of the original speed
-    // If the current animation is the last one, hide the Next button
-    if (currentAnimation === animations.length - 1) {
-        document.getElementById('next').style.display = 'none';
-    } else {
-        document.getElementById('next').style.display = 'inline-block';
-    }    
+    animationInstance.setSpeed(0.75); // Reduce the speed of the animation to 75% of the original speed    
 }
 
 function playAllAnimations() {
