@@ -4,9 +4,9 @@
 }
 
 #main_container {
-    width: 1200px; /* Set the width */
-    height: 800px; /* Set the height */
-    margin: 0 auto; /* Center the container */
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -101,8 +101,8 @@
 
 #button_controls,
 #right_container .controlPanel {
-    margin-top: auto; /* Push these elements to the bottom */
-    margin-bottom: 10px; /* Add some space at the bottom */
+    margin-top: auto;
+    margin-bottom: 10px; 
 }
 
 #extra-button {
@@ -128,15 +128,15 @@
 }
 
 #icon_container {
-    display: flex; /* Make the container a flex container */
-    justify-content: space-around; /* Distribute the items evenly across the container */
+    display: flex; 
+    justify-content: space-around;
     height: 100%;
-    width: 100%; /* Change the width to 100% */
+    width: 100%;
 }
 
 #icon_container img, #icon_container button {
-    flex: 1; /* Make the items flex items and allow them to grow and shrink */
-    max-width: 50px; /* Set a maximum width */
+    flex: 1;
+    max-width: 50px;
 }
 
 #tooltip_display {

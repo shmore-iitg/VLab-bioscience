@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 export var tooltips = [
     {
-        id: 'button_flask',
-        text: 'Flasks can be used for making solutions or for holding, containing, collecting, or sometimes volumetrically measuring chemicals, samples, solutions, etc. for chemical reactions or other processes such as mixing, heating, cooling, dissolving, precipitation, boiling (as in distillation), or analysis.'
+        id: 'button_eppendorf_tube',
+        text: 'Eppendorf Tubes are single-use tubes made from polypropylene for preparing, mixing, centrifuging, transporting and storing solid and liquid samples and reagents. The product can be used for training, routine and research laboratories in the areas of life sciences, industry or chemistry.'
     },
     {
         id: 'button_petri_dish',
@@ -36,18 +36,13 @@ export var tooltips = [
         text: 'A pipette (sometimes spelled as pipet) is a type of laboratory tool commonly used in chemistry and biology to transport a measured volume of liquid, often as a media dispenser.'        
     },
     {
-        id: 'button_pbs',
-        text: 'Phosphate buffered saline (PBS) is a non-toxic solution used in many biological laboratories. Unlike water, PBS prevents cells rupturing or shrivelling up due to osmosis.'
+        id: 'button_12x10_well_plate',
+        text: 'Well plates enable scientists to store numerous samples in a structured manner. In chemistry labs, they might be used to house various solutions, reagents, or reaction mixtures to be tested or analyzed.'
     },
     {
-        id: 'button_vial',
-        text: 'Vials are typically used to store medicines or laboratory samples. Although vials are mainly found in the medical field, they are critical to the workflow in various settings, from law enforcement agencies to department stores.'
-    },
-    {
-        id: 'button_cell_scraper',
-        text: 'Cell scrapers are used when it is necessary to harvest cells from a culture vessel without disrupting their viability or integrity. They are particularly useful when cells have formed a monolayer and need to be removed for further analysis, subculturing, or experimental procedures.'
+        id: 'button_multi_channel_pipette',
+        text: 'Multi-channel pipettes function in the same way as single-channel pipettes, but they utilise multiple tips for measuring and dispensing equal amounts of liquid at once. Common setups are 8 or 12 channels but 4, 6, 16 and 48 channel sets are also available.'
     }
-    // Add more objects for the other tooltips...
 ];
 
 // Function to show a tooltip with the given image and text
