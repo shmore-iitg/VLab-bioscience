@@ -42,7 +42,7 @@ document.getElementById('play-all').addEventListener('click', () => {
 });
 
 
-document.getElementById('next').addEventListener('click', () => {
+function nextAnimation() {
     currentAnimation = (currentAnimation + 1) % animations.length;    
     loadAnimation(); // Load and play the current animation
 
@@ -51,9 +51,28 @@ document.getElementById('next').addEventListener('click', () => {
 
     // If currentAnimation has reached the end of the animations array, change the button text to 'End'
     if (currentAnimation === animations.length - 1) {
-        document.getElementById('next').textContent = 'End';
+        document.getElementById('next').textContent = 'Show Flowcytometer functionality';
+
+        // Create a video element
+        var video = document.createElement('video');
+        video.src = './simulation/video/flow_cyto.mp4'; // Replace with the path to your video file
+        video.controls = true;
+        video.style.width = '100%';
+        video.style.height = 'auto';
+        
+        // Change the 'Next' button's click event handler to append the video to the animation_container and play it
+        document.getElementById('next').removeEventListener('click', nextAnimation);
+        document.getElementById('next').addEventListener('click', () => {
+            // Clear the animation_container and append the video element to it
+            var animationContainer = document.getElementById('animation_container'); // Replace with the id of your container
+            animationContainer.innerHTML = ''; // Clear the animation_container
+            animationContainer.appendChild(video);             
+            video.play();
+        });    
     }
-});
+}
+
+document.getElementById('next').addEventListener('click', nextAnimation);
 
 
 document.getElementById('prev').addEventListener('click', () => {
@@ -104,7 +123,7 @@ allProcedures.forEach((procedure, index) => {
         animationInstance.destroy();
     }
     animationInstance = lottie.loadAnimation({
-        container: document.getElementById('simulation_container'),
+        container: document.getElementById('animation_container'),
         renderer: 'svg',
         loop: false,
         autoplay: true,
