@@ -1,66 +1,66 @@
 // Create an array of all procedures
     var allProcedures = [ 
-        '1. Prepare the apparatus',
-        '2. Dispose of the media in the petri dish',        
-        '3. Collect the PBS with the pipette',
-        '4. Add 400uL of PBS to the petri dish',
-        '5. Shake the petri dish for 5 seconds',
-        '6. Dispose of the PBS in the flask',
-        '7. Repeat the previous steps',
-        '8. Collect 400 uL of the PBS in the pipette and add into the petri dish',
-        '9. Scrape the petri dish',               
-        '10. Pipette 400 uL of PBS from the petri dish into the vial',
-        '11. Move the vial to the centrifuge',        
-        '12. Load the vial into the centrifuge',
-        '13. Unload the vial from the centrifuge',
-        '14. Move the vial to the ice',
-        '15. Dispose of the buffer in the flask',
-        '16. Mix the marker into the vial',
-        '17. Move the vial to the heatblock',
-        '18. Take out the marker from the heatblock',        
-        '19. Load the marker into the centrifuge',
-        '1. Assemble the casting frame',
-        '2. Lock the Gasket',
-        '3. Mount the Gasket',
-        '4. Buffer Information appears',
-        '5. Add Resolving Buffer to the Gasket',
-        '6. Add a layer of Isopropanol',
-        '7. Dispose the Isopropanol',
-        '8. Add Water to cleanse the solution',
-        '9. Dispose off the excess of water',
-        '10. Add the Stacking Buffer',
-        '11. Comb the Gasket carefully',
-        '1. Take the Holder out',
-        '2. Take the Gasket out',
-        '3. Assemble the Gasket',
-        '4. Lock the Assembly',
-        '5. Transfer the Assembly into the Tank',
-        '6. Add the Transfer Buffer to the Assembly',
-        '7. Add the Transfer Buffer to the Tank',
-        '8. Take the Comb out carefully',
-        '9. Add the Sample/Marker in a Well',
-        '10. Close the Tank',
-        '11. Start the Electrophoresis at 120V',
-        '1. Remove the Gel cassette',
-        '2. Open the Gel cassette',
-        '3. Scrape the Wells',
-        '4. Soak the Nitrocellulose membrane and the blotting sheets in the Transfer Buffer',
-        '5. Transfer the Nitrocellulose sheet to the base of the transfer unit',
-        '6. Align the Gel over the Nitrocellulose membrane',
-        '7. Cover the soaking sheets over the Gel and roller is used to cover the entire membrane surface',
-        '8. Setup the Power Blotter',
-        '1. Take the Membrane out of the Powerblotter',
-        '2. Transfer the Nitrocellulose membrane into the container and wash with TBST',
-        '3. Stain the membrane with Ponceau Solution',
-        '4. Transfer the Nitrocellulose membrane to the base of the transfer unit',
-        '5. Block the membrane by Blocking Buffer',
-        '6. Wash the membrane with TBST in a Fast Wash twice',
-        '7. Primary Antibody Incubation',
-        '8. Washing with Secondary Antibody',
-        '1. ECL reagent preparation in a dark room',
-        '2. Transfer the Blot into a black box',
-        '3. Complete coverage of the Blot surface with Luminol',
-        '4. Load the Chemiluminescence machine with the Blot'
+        '1 ) Prepare the apparatus',
+        '2 ) Dispose of the media in the petri dish',        
+        '3 ) Collect the PBS with the pipette',
+        '4 ) Add 400uL of PBS to the petri dish',
+        '5 ) Shake the petri dish for 5 seconds',
+        '6 ) Dispose of the PBS in the flask',
+        '7 ) Repeat the previous steps',
+        '8 ) Collect 400 uL of the PBS in the pipette and add into the petri dish',
+        '9 ) Scrape the petri dish',               
+        '10) Pipette 400 uL of PBS from the petri dish into the vial',
+        '11) Move the vial to the centrifuge',        
+        '12) Load the vial into the centrifuge',
+        '13) Unload the vial from the centrifuge',
+        '14) Move the vial to the ice',
+        '15) Dispose of the buffer in the flask',
+        '16) Mix the marker into the vial',
+        '17) Move the vial to the heatblock',
+        '18) Take out the marker from the heatblock',        
+        '19) Load the marker into the centrifuge',
+        '1 ) Assemble the casting frame',
+        '2 ) Lock the Gasket',
+        '3 ) Mount the Gasket',
+        '4 ) Buffer Information appears',
+        '5 ) Add Resolving Buffer to the Gasket',
+        '6 ) Add a layer of Isopropanol',
+        '7 ) Dispose the Isopropanol',
+        '8 ) Add Water to cleanse the solution',
+        '9 ) Dispose off the excess of water',
+        '10) Add the Stacking Buffer',
+        '11) Comb the Gasket carefully',
+        '1 ) Take the Holder out',
+        '2 ) Take the Gasket out',
+        '3 ) Assemble the Gasket',
+        '4 ) Lock the Assembly',
+        '5 ) Transfer the Assembly into the Tank',
+        '6 ) Add the Transfer Buffer to the Assembly',
+        '7 ) Add the Transfer Buffer to the Tank',
+        '8 ) Take the Comb out carefully',
+        '9 ) Add the Sample/Marker in a Well',
+        '10) Close the Tank',
+        '11) Start the Electrophoresis at 120V',
+        '1 ) Remove the Gel cassette',
+        '2 ) Open the Gel cassette',
+        '3 ) Scrape the Wells',
+        '4 ) Soak the Nitrocellulose membrane and the blotting sheets in the Transfer Buffer',
+        '5 ) Transfer the Nitrocellulose sheet to the base of the transfer unit',
+        '6 ) Align the Gel over the Nitrocellulose membrane',
+        '7 ) Cover the soaking sheets over the Gel and roller is used to cover the entire membrane surface',
+        '8 ) Setup the Power Blotter',
+        '1 ) Take the Membrane out of the Powerblotter',
+        '2 ) Transfer the Nitrocellulose membrane into the container and wash with TBST',
+        '3 ) Stain the membrane with Ponceau Solution',
+        '4 ) Transfer the Nitrocellulose membrane to the base of the transfer unit',
+        '5 ) Block the membrane by Blocking Buffer',
+        '6 ) Wash the membrane with TBST in a Fast Wash twice',
+        '7 ) Primary Antibody Incubation',
+        '8 ) Washing with Secondary Antibody',
+        '1 ) ECL reagent preparation in a dark room',
+        '2 ) Transfer the Blot into a black box',
+        '3 ) Complete coverage of the Blot surface with Luminol',
+        '4 ) Load the Chemiluminescence machine with the Blot'
      ];
 
 // Create an array of steps
@@ -502,6 +502,11 @@ document.getElementById('next-end-button').addEventListener('click', function() 
     // Increment currentStep, but don't go past the last step
     if (currentStep < steps.length - 1) {
         currentStep++;
+        this.textContent = 'Next'; // Ensure the button text is 'Next'
+    } else {
+        // If we're at the last step, disable the 'next' button and change its text to 'End'
+        this.disabled = true;
+        this.textContent = 'End';
     }
     updateContent();
 });
@@ -516,6 +521,10 @@ document.getElementById('prev-button').addEventListener('click', function() {
     // Decrement currentStep, but don't go below 0
     if (currentStep > 0) {
         currentStep--;
+        // If we're not at the last step, ensure the 'next' button text is 'Next'
+        var nextButton = document.getElementById('next-end-button');
+        nextButton.textContent = 'Next';
+        nextButton.disabled = false; // Ensure the 'next' button is enabled
     }
     updateContent();
 });
