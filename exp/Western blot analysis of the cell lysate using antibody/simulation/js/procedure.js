@@ -5,7 +5,7 @@ export function updateProcedure(procedures, currentStep) {
         var procedureElement = document.createElement('p');
         procedureElement.textContent = procedure;
         if (index === currentStep) {
-            procedureElement.style.backgroundColor = 'yellow';
+            procedureElement.style.backgroundColor = '#FFD074';
         }
         procedureDiv.appendChild(procedureElement);
     });
