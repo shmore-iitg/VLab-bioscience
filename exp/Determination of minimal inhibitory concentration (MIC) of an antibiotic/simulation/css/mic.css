@@ -4,7 +4,11 @@
 }
 
 #main_container {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
     display: flex;
+    align-items: center;
     flex-direction: row;
 }
 
@@ -26,6 +30,9 @@
     flex-direction: column;
     display: flex;
     padding: 10px; 
+    height: 100%; 
+    align-items: center;
+    justify-content: flex-start;
 }
 
 #procedure_container {
@@ -92,6 +99,12 @@
     margin: 5px;
 }
 
+#button_controls,
+#right_container .controlPanel {
+    margin-top: auto;
+    margin-bottom: 10px; 
+}
+
 #extra-button {
     font-size: 16px;
     padding: 10px;
@@ -115,12 +128,15 @@
 }
 
 #icon_container {
+    display: flex; 
+    justify-content: space-around;
     height: 100%;
-    width: 30%;
+    width: 100%;
 }
 
 #icon_container img, #icon_container button {
-    width: 50px;
+    flex: 1;
+    max-width: 50px;
 }
 
 #tooltip_display {
@@ -159,19 +175,45 @@
 
 /* Change to column on screens smaller than 600px */
 @media screen and (max-width: 600px) {
+    #main_container,
+    #left_container,
+    #right_container,
+    #animation_container,
+    #procedure_container,
+    #button_controls,
+    #tooltip_display {
+        width: 100%; 
+    }
+
+    #start, #play-all, #next, #prev, #extra-button {
+        font-size: 1rem; 
+        padding: 12px 24px; 
+    }
+
+    #procedure_container,
+    #button_controls,
+    #procedure_title,
+    #extra-button {
+        font-size: 1rem; 
+        padding: 1rem; 
+        margin: 0.5rem;
+    }
+
+    #tooltip_display {
+        font-size: 1rem; 
+        padding: 1rem; 
+        margin: 1rem;
+    }
+    
     #main_container {
         flex-direction: column;
     }
-}
 
-@media screen and (max-width: 600px) {
     #left_container,
     #right_container {
-        padding: 5px; /* Use smaller padding for smaller screens */
+        padding: 5px;
     }
-}
 
-@media screen and (max-width: 600px) {
     #button_controls {
         margin-bottom: 20px;
     }
@@ -180,33 +222,19 @@
         padding: 5px;
         margin: 2px;
     }
-}
 
-@media screen and (max-width: 600px) {
     #procedure_container {
         font-size: 12px;
         padding: 5px;
         margin: 2px;
     }
-}
 
-@media screen and (max-width: 600px) {
-    #extra-button {
-        font-size: 12px;
-        padding: 5px;
-        margin: 2px;
-    }
-}
-
-@media screen and (max-width: 600px) {
     #procedure_title {
         font-size: 16px;
         padding: 5px;
         margin: 2px;
     }
-}
 
-@media screen and (max-width: 600px) {
     #tooltip_display {
         width: 100%;
         height: auto;
@@ -224,21 +252,11 @@
     #tooltip_display #tooltip-image {
         width: 40%;
         height: auto;
-        order: -1; /* Display the image first */
+        order: -1;
     }
-}
 
-@media screen and (max-width: 600px) {
     #animation_container {
         margin-top: 40px;
     }
-}
 
-@media (min-width: 1024px) { /* Adjust the breakpoint as needed */
-    #extra-button {
-        font-size: 18px;
-        padding: 5px;
-        width: 80px;
-        height: 40px;
-    }
 }

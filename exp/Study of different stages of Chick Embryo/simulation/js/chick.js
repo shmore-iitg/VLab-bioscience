@@ -2,6 +2,29 @@ let currentAnimation = 0;
 const animations = Array.from({length: 21}, (_, i) => `./simulation/json/${i+1}_Day_${i+1}.json`);
 let animationInstance = null;
 
+const titles = ['Embryo development', 
+                'Heart development', 
+                'Blood vessels grow and limb developes', 
+                'Limb, bud, eye, ear develop',
+                'Growth of beak and claw starts. Limb grows',
+                'Formation of reproductive organ',
+                'Beak development',
+                'Feather germs start to form',
+                'Further development of feather',
+                'Tow nail starts to form',
+                'Flight feather appear',
+                'Scales on legs start to form',
+                'Eyelids form',
+                'Embryo beings to assume the hatching position',
+                'Gut retraction to abdominal cavity',
+                'Chick start breathing air from Air cell',
+                'Head tucks between leg',
+                'Chick occipies almost entire egg + Movement increase for hatching',
+                'Informal pipping and lung respiration begins',
+                'External piping begins',
+                'Chick hatches from the egg'];
+
+
 document.getElementById('prev').style.display = 'none';
 
 document.getElementById('start').addEventListener('click', () => {
@@ -48,7 +71,10 @@ function loadAnimation() {
         autoplay: true,
         path: animations[currentAnimation]
     });
-    animationInstance.setSpeed(0.75); // Reduce the speed of the animation to 75% of the original speed    
+    animationInstance.setSpeed(0.30); // Reduce the speed of the animation to 75% of the original speed    
+    
+    // Set the title
+    document.getElementById('title').textContent = titles[currentAnimation];
 }
 
 function playAllAnimations() {
