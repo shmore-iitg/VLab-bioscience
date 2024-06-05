@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    overflow: auto;
 }
 
 #left_container {
@@ -29,11 +30,10 @@
     flex : 1;
     flex-direction: column;
     display: flex;
-    padding: 10px; 
+    padding: 10px;    
     height: 100%; 
     align-items: center;
-    justify-content: flex-start;
-    overflow: auto;
+    justify-content: flex-start;    
 }
 
 #procedure_container {
@@ -93,6 +93,7 @@
 #button_controls {
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
     width: 100%;
     margin-top: 20px;
     font-size: 16px;
@@ -144,9 +145,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
+    transform: translate(-50%, -50%);         
     padding: 10px;
     border-radius: 4px;
     width: 60%;
@@ -260,4 +259,7 @@
         margin-top: 40px;
     }
 
+    #left_container {
+        overflow: auto;
+    }
 }
