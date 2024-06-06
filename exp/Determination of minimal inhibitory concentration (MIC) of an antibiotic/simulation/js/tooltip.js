@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 export var tooltips = [
     {
         id: 'button_eppendorf_tube',
-        text: 'Eppendorf Tubes are single-use tubes made from polypropylene for preparing, mixing, centrifuging, transporting and storing solid and liquid samples and reagents. The product can be used for training, routine and research laboratories in the areas of life sciences, industry or chemistry.'
+        text: 'Eppendorf Tubes are single-use tubes made from polypropylene for preparing, mixing, centrifuging, transporting and storing solid and liquid samples and reagents.'
     },
     {
         id: 'button_petri_dish',
