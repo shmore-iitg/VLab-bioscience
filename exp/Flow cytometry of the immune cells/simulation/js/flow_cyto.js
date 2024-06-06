@@ -5,16 +5,16 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Prepare the apparatus',
-    '2. Dispose of the media in the petri dish',        
-    '3. Collect the PBS with the pipette',
-    '4. Add 400uL of PBS to the petri dish',
-    '5. Shake the petri dish for 5 seconds',
-    '6. Dispose of the PBS in the flask',
-    '7. Repeat the previous steps',
-    '8. Collect 400 uL of the PBS in the pipette and add into the petri dish',
-    '9. Scrape the petri dish',               
-    '10. Pipette 400 uL of PBS from the petri dish into the vial' ];
+    '1. Flow Cytometry of the immune cells',
+    '2. Flow Cytometry of the immune cells',        
+    '3. Flow Cytometry of the immune cells',
+    '4. Flow Cytometry of the immune cells',
+    '5. Flow Cytometry of the immune cells',
+    '6. Flow Cytometry of the immune cells',
+    '7. Flow Cytometry of the immune cells',
+    '8. Flow Cytometry of the immune cells',
+    '9. Flow Cytometry of the immune cells',               
+    '10. Flow Cytometry of the immune cells' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';

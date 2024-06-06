@@ -53,13 +53,13 @@ export var tooltips = [
 // Function to show a tooltip with the given image and text
 export function showTooltip(id, image, text, event) {
     // Get the tooltip container and its elements
-    var tooltipContainer = document.getElementById('tooltip_container');
+    var tooltipContainer = document.getElementById('tooltip_display');
     var tooltipImage = document.getElementById('tooltip-image');
     var tooltipText = document.getElementById('tooltip-text');
 
     // Check if the tooltip container exists
     if (!tooltipContainer) {
-        console.error('tooltip_container not found');
+        console.error('tooltip_display not found');
         return;
     }
 
@@ -84,11 +84,11 @@ export function showTooltip(id, image, text, event) {
 // Function to hide the tooltip
 export function hideTooltip() {
     // Get the tooltip container
-    var tooltipContainer = document.getElementById('tooltip_container');
+    var tooltipContainer = document.getElementById('tooltip_display');
 
     // Check if the tooltip container exists
     if (!tooltipContainer) {
-        console.error('tooltip_container not found');
+        console.error('tooltip_display not found');
         return;
     }
 
