@@ -203,6 +203,10 @@
         padding: 1rem; 
         margin: 0.5rem;
     }
+    
+    * {
+        box-sizing: border-box;
+    }
 
     #tooltip_display {
         font-size: 1rem; 
@@ -216,7 +220,11 @@
 
     #left_container,
     #right_container {
-        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
     }
 
     #button_controls {
@@ -229,9 +237,14 @@
     }
 
     #procedure_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         font-size: 12px;
         padding: 5px;
         margin: 2px;
+        text-align: justify;  
     }
 
     #procedure_title {
@@ -243,7 +256,6 @@
     #tooltip_display {
         width: 100%;
         height: auto;
-        position: absolute;
         top: 50%;
         padding-top: 20px;
         margin-top: 20px; 
@@ -262,9 +274,5 @@
 
     #animation_container {
         margin-top: 40px;
-    }
-
-    #left_container {
-        overflow: auto;
     }
 }
