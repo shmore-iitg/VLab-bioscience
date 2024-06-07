@@ -24,12 +24,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 export var tooltips = [
     {
-        id: 'button_flask',
-        text: 'Flasks can be used for making solutions or for holding, containing, collecting, or sometimes volumetrically measuring chemicals, samples, solutions, etc. for chemical reactions or other processes such as mixing, heating, cooling, dissolving, precipitation, boiling (as in distillation), or analysis.'
-    },
-    {
-        id: 'button_petri_dish',
-        text: 'A petri dish is used to culture different types of cells, including bacteria and molds. It often contains a nutritional medium on which the cells can grow. A petri dish is a flat, shallow dish made of glass or plastic with a suitable lid.'
+        id: 'button_histopaque',
+        text: 'Histopaque is a ready-to-use medium facilitates rapid recovery of viable lymphocytes and other mononuclear cells from small volumes of whole blood or bone marrow.'
     },
     {
         id: 'button_pipette',
@@ -40,14 +36,9 @@ export var tooltips = [
         text: 'Phosphate buffered saline (PBS) is a non-toxic solution used in many biological laboratories. Unlike water, PBS prevents cells rupturing or shrivelling up due to osmosis.'
     },
     {
-        id: 'button_vial',
-        text: 'Vials are typically used to store medicines or laboratory samples. Although vials are mainly found in the medical field, they are critical to the workflow in various settings, from law enforcement agencies to department stores.'
-    },
-    {
-        id: 'button_cell_scraper',
-        text: 'Cell scrapers are used when it is necessary to harvest cells from a culture vessel without disrupting their viability or integrity. They are particularly useful when cells have formed a monolayer and need to be removed for further analysis, subculturing, or experimental procedures.'
+        id: 'Centrifuge Tubes',
+        text: 'Centrifuge tubes are used to contain liquids during centrifugation, which separates the sample into its components by rapidly rotating it around a fixed axis.'
     }
-    // Add more objects for the other tooltips...
 ];
 
 // Function to show a tooltip with the given image and text

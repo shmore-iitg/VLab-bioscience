@@ -5,14 +5,14 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Flow Cytometry of the immune cells',
-    '2. Flow Cytometry of the immune cells',        
-    '3. Flow Cytometry of the immune cells',
-    '4. Flow Cytometry of the immune cells',
-    '5. Flow Cytometry of the immune cells',
+    '1. 5 ml Histopaque is added to 2 tubes',
+    '2. PBS is added to our chicken blood sample',        
+    '3. Blood – PBS sample is added to tubes containing histopaque',
+    '4. The tubes are centrifuged',
+    '5. The middle layer is carefully pipetted out',
     '6. Flow Cytometry of the immune cells',
-    '7. Flow Cytometry of the immune cells',
-    '8. Flow Cytometry of the immune cells',
+    '7. Bottom layer is carefully pipetted  out',
+    '8. The tubes are centrifuged',
     '9. Flow Cytometry of the immune cells',               
     '10. Flow Cytometry of the immune cells' ];
 
@@ -43,7 +43,8 @@ document.getElementById('play-all').addEventListener('click', () => {
 
 
 function nextAnimation() {
-    currentAnimation = (currentAnimation + 1) % animations.length;    
+    currentAnimation = (currentAnimation + 1) % animations.length;  
+    console.log(`Next - Loading animation ${currentAnimation}`); // Log when an animation is loaded    
     loadAnimation(); // Load and play the current animation
 
     // Display the 'Prev' button when the 'Next' button is clicked for the first time
@@ -74,9 +75,30 @@ function nextAnimation() {
 
 document.getElementById('next').addEventListener('click', nextAnimation);
 
-
 document.getElementById('prev').addEventListener('click', () => {
-    currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;    
+    // Check if the 'Next' button's textContent is 'Show Flowcytometer functionality'
+    const nextButton = document.getElementById('next');
+    if (nextButton.textContent === 'Show Flowcytometer functionality') {
+        // Change the 'Next' button's textContent back to 'Next'
+        nextButton.textContent = 'Next';
+
+        // Remove the event listener that plays the video
+        nextButton.removeEventListener('click', () => {
+            // Clear the animation_container and append the video element to it
+            var animationContainer = document.getElementById('animation_container'); // Replace with the id of your container
+            animationContainer.innerHTML = ''; // Clear the animation_container
+            animationContainer.appendChild(video);             
+            video.play();
+        });
+
+        // Add back the original event listener
+        nextButton.addEventListener('click', nextAnimation);
+    } else {
+        // Decrement the currentAnimation index only if the 'Next' button does not show 'Show Flowcytometer functionality'
+        currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;  
+    }
+
+    console.log(`Prev - Loading animation ${currentAnimation}`); // Log when an animation is loaded  
     loadAnimation(); // Load and play the current animation
 });
 
