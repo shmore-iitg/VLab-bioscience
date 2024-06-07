@@ -4,25 +4,25 @@ let animationInstance = null;
 
 const titles = ['Embryo development', 
                 'Heart development', 
-                'Blood vessels grow and limb developes', 
-                'Limb, bud, eye, ear develop',
-                'Growth of beak and claw starts. Limb grows',
+                'Blood vessels grow, and limbs develop.', 
+                'Limb, bud, eye, ear develop.',
+                'Growth of beak and claw, and limb growth.',
                 'Formation of reproductive organ',
                 'Beak development',
                 'Feather germs start to form',
                 'Further development of feather',
-                'Tow nail starts to form',
+                'Toenail starts to form.',
                 'Flight feather appear',
-                'Scales on legs start to form',
+                'Scales on the legs start to form.',
                 'Eyelids form',
                 'Embryo beings to assume the hatching position',
                 'Gut retraction to abdominal cavity',
-                'Chick start breathing air from Air cell',
-                'Head tucks between leg',
-                'Chick occipies almost entire egg + Movement increase for hatching',
-                'Informal pipping and lung respiration begins',
-                'External piping begins',
-                'Chick hatches from the egg'];
+                'The chick starts breathing air from the air cell.',
+                'The chick tucks its head between its legs.',
+                'The chick occupies almost the entire egg, and its movement increases in preparation for hatching.',
+                'Internal pipping and lung respiration begins',
+                'External pipping begins',
+                'Egg Hatching'];
 
 
 document.getElementById('prev').style.display = 'none';
