@@ -37,11 +37,11 @@ export var tooltips = [
     },
     {
         id: 'button_pbs',
-        text: 'Phosphate buffered saline (PBS) is a non-toxic solution used in many biological laboratories. Unlike water, PBS prevents cells rupturing or shrivelling up due to osmosis.'
+        text: 'Phosphate-buffered saline (PBS) is a buffer solution commonly used in biological research to maintain a constant pH and osmolarity. It helps to wash cells, dilute substances, and serve as a medium for cell culture.'
     },
     {
         id: 'button_12x10_well_plate',
-        text: 'Well plates enable scientists to store numerous samples in a structured manner. In chemistry labs, they might be used to house various solutions, reagents, or reaction mixtures to be tested or analyzed.'
+        text: '96-well plate is a laboratory tool with 96 small wells in an 8x12 grid. It allows for simultaneous testing of multiple samples under the same conditions, facilitating efficient and organized data collection.'
     },
     {
         id: 'button_multi_channel_pipette',
