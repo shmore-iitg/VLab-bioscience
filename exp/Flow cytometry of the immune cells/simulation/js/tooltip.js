@@ -36,7 +36,7 @@ export var tooltips = [
         text: 'Phosphate buffered saline (PBS) is a non-toxic solution used in many biological laboratories. Unlike water, PBS prevents cells rupturing or shrivelling up due to osmosis.'
     },
     {
-        id: 'Centrifuge Tubes',
+        id: 'button_centrifuge_tubes',
         text: 'Centrifuge tubes are used to contain liquids during centrifugation, which separates the sample into its components by rapidly rotating it around a fixed axis.'
     }
 ];
