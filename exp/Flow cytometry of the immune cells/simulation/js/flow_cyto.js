@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 10}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 9}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -7,14 +7,13 @@ let currentProcedure = null;
 var allProcedures = [ 
     '1. 5 ml Histopaque is added to 2 tubes',
     '2. PBS is added to our chicken blood sample',        
-    '3. Blood – PBS sample is added to tubes containing histopaque',
+    '3. Blood - PBS sample is added to tubes containing histopaque',
     '4. The tubes are centrifuged',
     '5. The middle layer is carefully pipetted out',
-    '6. Flow Cytometry of the immune cells',
+    '6. PBS is added, and tubes are centrifuged',
     '7. Bottom layer is carefully pipetted  out',
     '8. The tubes are centrifuged',
-    '9. Flow Cytometry of the immune cells',               
-    '10. Flow Cytometry of the immune cells' ];
+    '9. Mixing DMEM with the Final extract' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
