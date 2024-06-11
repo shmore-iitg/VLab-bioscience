@@ -33,24 +33,46 @@ document.getElementById('start').addEventListener('click', () => {
     document.getElementById('play-all').style.display = 'inline-block';
     document.getElementById('next').style.display = 'inline-block';
     // Do not display the Previous button yet
+
+    // Make the 'Play-All' button clickable and change its color back
+    const playAllButton = document.getElementById('play-all');
+    playAllButton.disabled = false;
+    playAllButton.style.backgroundColor = ''; // Change the color back to the original
 });
 
 document.getElementById('play-all').addEventListener('click', () => {
     playAllAnimations();
+
+    // Hide the 'Prev' and 'Next' buttons
+    document.getElementById('prev').style.display = 'none';
+    document.getElementById('next').style.display = 'none';
+
+    // Show the 'Start' button
+    document.getElementById('start').style.display = 'inline-block';
+
+    // Make the 'Play-All' button unclickable and change its color
+    const playAllButton = document.getElementById('play-all');
+    playAllButton.disabled = true;
+    playAllButton.style.backgroundColor = '#cccccc'; // Change the color to a lighter shade
 });
 
 
 document.getElementById('next').addEventListener('click', () => {
     currentAnimation = (currentAnimation + 1) % animations.length;
-    //console.log(`Next clicked Loading animation ${currentAnimation}`); // Log when the 'Next' button is clicked
     loadAnimation(); // Load and play the current animation
 
     // Display the 'Prev' button when the 'Next' button is clicked for the first time
-    document.getElementById('prev').style.display = 'inline-block';
+    // and currentAnimation is not the first animation
+    if (currentAnimation !== 0) {
+        document.getElementById('prev').style.display = 'inline-block';
+    }
 
     // If currentAnimation has reached the end of the animations array, change the button text to 'End'
     if (currentAnimation === animations.length - 1) {
-        document.getElementById('next').textContent = 'End';
+        const nextButton = document.getElementById('next');
+        nextButton.textContent = 'End';
+        nextButton.disabled = true;
+        nextButton.style.backgroundColor = '#cccccc'; // Change the color to a lighter shade
     }
 });
 
@@ -58,9 +80,26 @@ document.getElementById('next').addEventListener('click', () => {
 document.getElementById('prev').addEventListener('click', () => {
     currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;    
     loadAnimation(); // Load and play the current animation
+
+    // Hide the 'Prev' button if the currentAnimation is the first animation
+    if (currentAnimation === 0) {
+        document.getElementById('prev').style.display = 'none';
+    }
+
+    // Check if the 'Next' button's textContent is 'End'
+    const nextButton = document.getElementById('next');
+    if (nextButton.textContent === 'End') {
+        // Change the 'Next' button's textContent back to 'Next'
+        nextButton.textContent = 'Next';
+
+        // Enable the 'Next' button
+        nextButton.disabled = false;
+        nextButton.style.backgroundColor = ''; // Change the color back to the original    
+    }
 });
 
 function loadAnimation() {
+    console.log(`Loading animation ${currentAnimation}`); // Log when an animation is loaded
     if(animationInstance) {
         animationInstance.destroy();
     }
@@ -98,6 +137,11 @@ function playAnimation(index) {
         // If all animations have completed, display the 'Prev' button
         if (currentAnimation === animations.length - 1) {
             document.getElementById('prev').style.display = 'inline-block';
+
+             // Make the 'Play-All' button clickable and change its color back
+             const playAllButton = document.getElementById('play-all');
+             playAllButton.disabled = false;
+             playAllButton.style.backgroundColor = ''; // Change the color back to the original         
         }
     });
 }
