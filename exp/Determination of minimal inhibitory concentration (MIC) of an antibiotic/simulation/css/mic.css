@@ -121,7 +121,7 @@
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 16px;
     transition-duration: 0.4s;
 }
 
@@ -201,18 +201,22 @@
         width: 90%; 
     }
 
-    #start, #play-all, #next, #prev, #extra-button {
+    #start, #play-all, #next, #prev {
         font-size: 1rem; 
         padding: 12px 24px; 
     }
 
     #procedure_container,
     #button_controls,
-    #procedure_title,
-    #extra-button {
+    #procedure_title {
         font-size: 1rem; 
         padding: 1rem; 
         margin: 0.5rem;
+    }
+
+    #extra-button {
+        font-size: 10px; 
+        padding: 10px; 
     }
 
     * {
