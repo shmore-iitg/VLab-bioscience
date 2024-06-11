@@ -2,6 +2,8 @@ let currentAnimation = 0;
 const animations = Array.from({length: 9}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
+let videoPlayed = false;
+let video = document.createElement('video');
 
 // Create an array of all procedures
 var allProcedures = [ 
@@ -42,59 +44,62 @@ document.getElementById('play-all').addEventListener('click', () => {
 
 
 function nextAnimation() {
-    currentAnimation = (currentAnimation + 1) % animations.length;  
-    console.log(`Next - Loading animation ${currentAnimation}`); // Log when an animation is loaded    
-    loadAnimation(); // Load and play the current animation
-
-    // Display the 'Prev' button when the 'Next' button is clicked for the first time
-    document.getElementById('prev').style.display = 'inline-block';
+    // If currentAnimation has reached the second last in the animations array, change the button text to 'Show Flowcytometer functionality'
+    if (currentAnimation === animations.length - 2) {
+        document.getElementById('next').textContent = 'Show Flowcytometer functionality';
+    }
 
     // If currentAnimation has reached the end of the animations array, change the button text to 'End'
     if (currentAnimation === animations.length - 1) {
-        document.getElementById('next').textContent = 'Show Flowcytometer functionality';
-
         // Create a video element
-        var video = document.createElement('video');
         video.src = './simulation/video/flow_cyto.mp4'; // Replace with the path to your video file
         video.controls = true;
         video.style.width = '100%';
         video.style.height = 'auto';
-        
-        // Change the 'Next' button's click event handler to append the video to the animation_container and play it
-        document.getElementById('next').removeEventListener('click', nextAnimation);
-        document.getElementById('next').addEventListener('click', () => {
-            // Clear the animation_container and append the video element to it
-            var animationContainer = document.getElementById('animation_container'); // Replace with the id of your container
-            animationContainer.innerHTML = ''; // Clear the animation_container
-            animationContainer.appendChild(video);             
-            video.play();
-        });    
+
+        // Clear the animation_container and append the video element to it
+        var animationContainer = document.getElementById('animation_container'); // Replace with the id of your container
+        animationContainer.innerHTML = ''; // Clear the animation_container
+        animationContainer.appendChild(video);             
+        video.play();
+
+        // Change the text of the button to 'End' and make it unclickable
+        var nextButton = document.getElementById('next');
+        nextButton.textContent = 'End';
+        nextButton.disabled = true;
+
+        videoPlayed = true; // Set videoPlayed to true when the video is played
+    } else {
+        currentAnimation = (currentAnimation + 1) % animations.length;  
+        console.log(`Next - Loading animation ${currentAnimation}`); // Log when an animation is loaded    
+        loadAnimation(); // Load and play the current animation
+
+        // Display the 'Prev' button when the 'Next' button is clicked for the first time
+        document.getElementById('prev').style.display = 'inline-block';
     }
 }
 
 document.getElementById('next').addEventListener('click', nextAnimation);
 
 document.getElementById('prev').addEventListener('click', () => {
-    // Check if the 'Next' button's textContent is 'Show Flowcytometer functionality'
+    // Check if the 'Next' button's textContent is 'End'
     const nextButton = document.getElementById('next');
-    if (nextButton.textContent === 'Show Flowcytometer functionality') {
-        // Change the 'Next' button's textContent back to 'Next'
-        nextButton.textContent = 'Next';
+    if (videoPlayed) {
+        // Change the 'Next' button's textContent back to 'Show Flowcytometer functionality'
+        nextButton.textContent = 'Show Flowcytometer functionality';
 
-        // Remove the event listener that plays the video
-        nextButton.removeEventListener('click', () => {
-            // Clear the animation_container and append the video element to it
-            var animationContainer = document.getElementById('animation_container'); // Replace with the id of your container
-            animationContainer.innerHTML = ''; // Clear the animation_container
-            animationContainer.appendChild(video);             
-            video.play();
-        });
+        // Make the 'Next' button clickable again
+        nextButton.disabled = false;
 
-        // Add back the original event listener
-        nextButton.addEventListener('click', nextAnimation);
+        videoPlayed = false; // Set videoPlayed back to false when the 'Prev' button is clicked
     } else {
-        // Decrement the currentAnimation index only if the 'Next' button does not show 'Show Flowcytometer functionality'
+        // Decrement the currentAnimation index only if the 'Next' button does not show 'End'
         currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;  
+
+        // If the current animation is not the last one, change the 'Next' button's textContent back to 'Next'
+        if (currentAnimation !== animations.length - 1) {
+            nextButton.textContent = 'Next';
+        }
     }
 
     console.log(`Prev - Loading animation ${currentAnimation}`); // Log when an animation is loaded  
