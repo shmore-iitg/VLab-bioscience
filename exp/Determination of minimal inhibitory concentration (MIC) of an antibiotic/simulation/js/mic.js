@@ -77,6 +77,7 @@ document.getElementById('next').addEventListener('click', () => {
         nextButton.disabled = true;
         nextButton.style.color = 'lightgray'; // Change this to the color you want
     } else {
+        nextButton.textContent = 'Next';
         nextButton.disabled = false;
         nextButton.style.color = originalNextButtonColor;
     }
@@ -86,6 +87,11 @@ document.getElementById('next').addEventListener('click', () => {
 document.getElementById('prev').addEventListener('click', () => {
     currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;    
     loadAnimation(); // Load and play the current animation
+    if (currentAnimation !== animations.length - 1) {
+        nextButton.textContent = 'Next';
+        nextButton.disabled = false;
+        nextButton.style.color = originalNextButtonColor;
+    }
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -158,17 +164,17 @@ function playAnimation(index) {
             playAnimation(currentAnimation);
         }
     }).finally(() => {
-         // Enable the play-all button and restore its color when all animations have completed
-         if (currentAnimation === animations.length - 1) {
-            playAllButton.disabled = false;
-            playAllButton.style.color = originalPlayAllButtonColor;
-            document.getElementById('prev').style.display = 'inline-block';
-                        
-            // Reset the 'Next' button
-            nextButton.textContent = 'Next';
-            nextButton.disabled = false;
-            nextButton.style.color = originalNextButtonColor;
-        }
+        // Enable the play-all button and restore its color when all animations have completed
+        if (currentAnimation === animations.length - 1) {
+           playAllButton.disabled = false;
+           playAllButton.style.color = originalPlayAllButtonColor;
+           document.getElementById('prev').style.display = 'inline-block';
+                       
+           // Reset the 'Next' button
+           nextButton.textContent = 'Next';
+           nextButton.disabled = false;
+           nextButton.style.color = originalNextButtonColor;
+       }
     });
 }
 

@@ -14,16 +14,31 @@ import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
 import { hideTooltip } from './tooltip.js';
 
+// Get the play-all, start, prev, and next buttons
+const playAllButton = document.getElementById('play-all');
+const startButton = document.getElementById('start');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+
+// Store the original color of the play-all and the next button
+const originalPlayAllButtonColor = playAllButton.style.color;
+const originalNextButtonColor = nextButton.style.color;
+
 document.getElementById('prev').style.display = 'none';
 document.getElementById('procedure_container').style.display = 'none';
 document.getElementById('extra-button').style.display = 'none';
 document.getElementById('procedure_title').style.display = 'none';
 
-document.getElementById('start').addEventListener('click', () => {
+
+startButton.addEventListener('click', () => {  
     loadAnimation();
     document.getElementById('start').style.display = 'none';
     document.getElementById('play-all').style.display = 'inline-block';
     document.getElementById('next').style.display = 'inline-block';
+    // Enable the play-all button and restore its color when the start button is clicked
+    playAllButton.disabled = false;
+    playAllButton.style.color = originalPlayAllButtonColor;
+
     // Hide the procedure block/title and the extra button
     document.getElementById('procedure_container').style.display = 'block';
     document.getElementById('extra-button').style.display = 'block';
@@ -31,10 +46,20 @@ document.getElementById('start').addEventListener('click', () => {
     // Do not display the Previous button yet
 });
 
-document.getElementById('play-all').addEventListener('click', () => {
+playAllButton.addEventListener('click', () => {
+    // Hide the prev and next buttons
+    prevButton.style.display = 'none';
+    nextButton.style.display = 'none';
+
+    // Show the start button
+    startButton.style.display = 'inline-block';
+
+    // Disable the play-all button and change its color
+    playAllButton.disabled = true;
+    playAllButton.style.color = 'lightgray'; // Change this to the color you want
+
     playAllAnimations();
 });
-
 
 document.getElementById('next').addEventListener('click', () => {
     currentAnimation = (currentAnimation + 1) % animations.length;    
@@ -46,6 +71,12 @@ document.getElementById('next').addEventListener('click', () => {
     // If currentAnimation has reached the end of the animations array, change the button text to 'End'
     if (currentAnimation === animations.length - 1) {
         document.getElementById('next').textContent = 'End';
+        nextButton.disabled = true;
+        nextButton.style.color = 'lightgray'; // Change this to the color you want
+    } else {
+        nextButton.textContent = 'Next';
+        nextButton.disabled = false;
+        nextButton.style.color = originalNextButtonColor;
     }
 });
 
@@ -53,6 +84,11 @@ document.getElementById('next').addEventListener('click', () => {
 document.getElementById('prev').addEventListener('click', () => {
     currentAnimation = (currentAnimation - 1 + animations.length) % animations.length;    
     loadAnimation(); // Load and play the current animation
+    if (currentAnimation !== animations.length - 1) {
+        nextButton.textContent = 'Next';
+        nextButton.disabled = false;
+        nextButton.style.color = originalNextButtonColor;
+    }
 });
 
 document.addEventListener('DOMContentLoaded', (event) => {
@@ -125,10 +161,17 @@ function playAnimation(index) {
             playAnimation(currentAnimation);
         }
     }).finally(() => {
-        // If all animations have completed, display the 'Prev' button
+        // Enable the play-all button and restore its color when all animations have completed
         if (currentAnimation === animations.length - 1) {
-            document.getElementById('prev').style.display = 'inline-block';
-        }
+           playAllButton.disabled = false;
+           playAllButton.style.color = originalPlayAllButtonColor;
+           document.getElementById('prev').style.display = 'inline-block';
+                       
+           // Reset the 'Next' button
+           nextButton.textContent = 'Next';
+           nextButton.disabled = false;
+           nextButton.style.color = originalNextButtonColor;
+       }
     });
 }
 
