@@ -74,8 +74,10 @@ function nextAnimation() {
         console.log(`Next - Loading animation ${currentAnimation}`); // Log when an animation is loaded    
         loadAnimation(); // Load and play the current animation
 
-        // Display the 'Prev' button when the 'Next' button is clicked for the first time
-        document.getElementById('prev').style.display = 'inline-block';
+        // Display the 'Prev' button only when the current animation is not the first one
+        if (currentAnimation !== 0) {
+            document.getElementById('prev').style.display = 'inline-block';
+        }
     }
 }
 
@@ -84,6 +86,7 @@ document.getElementById('next').addEventListener('click', nextAnimation);
 document.getElementById('prev').addEventListener('click', () => {
     // Check if the 'Next' button's textContent is 'End'
     const nextButton = document.getElementById('next');
+    const prevButton = document.getElementById('prev');
     if (videoPlayed) {
         // Change the 'Next' button's textContent back to 'Show Flowcytometer functionality'
         nextButton.textContent = 'Show Flowcytometer functionality';
@@ -99,6 +102,13 @@ document.getElementById('prev').addEventListener('click', () => {
         // If the current animation is not the last one, change the 'Next' button's textContent back to 'Next'
         if (currentAnimation !== animations.length - 1) {
             nextButton.textContent = 'Next';
+        }
+        
+        // If the current animation is the first one, hide the 'Prev' button
+        if (currentAnimation === 0) {
+            prevButton.style.display = 'none';
+        } else {
+            prevButton.style.display = 'inline-block';
         }
     }
 
