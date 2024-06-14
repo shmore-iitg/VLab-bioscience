@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 4}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 10}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -8,7 +8,13 @@ var allProcedures = [
     '1. ELISA step 1',
     '2. ELISA step 2',        
     '3. ELISA step 3',
-    '4. ELISA step 4' ];
+    '4. ELISA step 4',
+    '5. ELISA step 5 Washing Buffer',
+    '6. ELISA step 6 Blocking Buffer',
+    '7. ELISA step 7 Primary Antibody',        
+    '8. ELISA step 8 Secondary Antibody',
+    '9. ELISA step 9 Substrate',
+    '10. ELISA step 10 Measure' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
