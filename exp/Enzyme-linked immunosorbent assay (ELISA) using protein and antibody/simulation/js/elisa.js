@@ -5,16 +5,16 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. ELISA step 1',
-    '2. ELISA step 2',        
-    '3. ELISA step 3',
-    '4. ELISA step 4',
-    '5. ELISA step 5 Washing Buffer',
-    '6. ELISA step 6 Blocking Buffer',
-    '7. ELISA step 7 Primary Antibody',        
-    '8. ELISA step 8 Secondary Antibody',
-    '9. ELISA step 9 Substrate',
-    '10. ELISA step 10 Measure' ];
+    '1. Pipette out PBS in Petri Plate',
+    '2. Pipette into 96 well-plate using a multichannel pipette',        
+    '3. Add antigen to the first row',
+    '4. Serial Dilution of Antigen',
+    '5. Wash the plate and discard the contents',
+    '6. Add blocking Buffer and incubate',
+    '7. Using a multichannel pipette, add primary antibody',        
+    '8. Using a multichannel pipette, add secondary antibody',
+    '9. Using a multichannel pipette, add substrate',
+    '10. Measure the Optical Density' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
