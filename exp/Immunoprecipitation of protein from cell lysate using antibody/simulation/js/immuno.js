@@ -5,13 +5,13 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Immunoprecipation of protein from cell lysate using antibody',
-    '2. Immunoprecipation of protein from cell lysate using antibody',        
-    '3. Immunoprecipation of protein from cell lysate using antibody',
-    '4. Immunoprecipation of protein from cell lysate using antibody',
-    '5. Repeat json - Immunoprecipation of protein from cell lysate using antibody',
-    '6. Immunoprecipation of protein from cell lysate using antibody',
-    '7. Immunoprecipation of protein from cell lysate using antibody'];
+    '1. Supernatant Out',
+    '2. PBS wash',        
+    '3. Lysis',
+    '4. To Vial',
+    '5. Please ignore this step and json',
+    '6. Supernatant again',
+    '7. Lysis again'];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';

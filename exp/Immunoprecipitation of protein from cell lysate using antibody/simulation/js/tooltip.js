@@ -40,12 +40,8 @@ export var tooltips = [
         text: 'Phosphate-buffered saline (PBS) is a buffer solution commonly used in biological research to maintain a constant pH and osmolarity. It helps to wash cells, dilute substances, and serve as a medium for cell culture.'
     },
     {
-        id: 'button_12x10_well_plate',
-        text: '96-well plate is a laboratory tool with 96 small wells in an 8x12 grid. It allows for simultaneous testing of multiple samples under the same conditions, facilitating efficient and organized data collection.'
-    },
-    {
-        id: 'button_multi_channel_pipette',
-        text: 'Multi-channel pipettes function in the same way as single-channel pipettes, but they utilise multiple tips for measuring and dispensing equal amounts of liquid at once. Common setups are 8 or 12 channels but 4, 6, 16 and 48 channel sets are also available.'
+        id: 'button_eppendorf_tube',
+        text: 'Eppendorf Tubes are single-use tubes made from polypropylene for preparing, mixing, centrifuging, transporting and storing solid and liquid samples and reagents.'
     }
 ];
 
