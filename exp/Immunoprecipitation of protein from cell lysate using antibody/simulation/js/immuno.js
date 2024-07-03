@@ -9,7 +9,7 @@ var allProcedures = [
     '2. PBS wash',        
     '3. Lysis',
     '4. To Vial',
-    '5. Please ignore this step and json',
+    '5. Centrifuge',
     '6. Supernatant again',
     '7. Lysis again'];
 
