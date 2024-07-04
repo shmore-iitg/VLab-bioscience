@@ -5,15 +5,15 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Procedure',
-    '2. Procedure',
-    '3. Procedure',
-    '4. Procedure',
-    '5. Procedure',
-    '6. Procedure',
-    '7. Procedure',
-    '8. Procedure',
-    '9. Procedure']
+    '1. PBS is added to chicken blood sample',
+    '2. Blood-PBS sample is added to tubes containing histopaque',
+    '3. The tubes are centrifuged',
+    '4. Middle buffy coat is carefully pipetted out',
+    '5. PBS is added, and tubes are centrifuged',
+    '6. Supernatant is discarded and bottom layer containing cells is collected',
+    '7. Cells are placed on a clean and dry microscopic glass slide',
+    '8. Dye is added and incubated for 10 minutes',
+    '9. The slide is rinsed thoroughly with PBS']
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';

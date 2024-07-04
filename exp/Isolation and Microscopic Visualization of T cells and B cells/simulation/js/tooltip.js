@@ -24,24 +24,28 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 export var tooltips = [
     {
-        id: 'button_eppendorf_tube',
-        text: 'Eppendorf Tubes are single-use tubes made from polypropylene for preparing, mixing, centrifuging, transporting and storing solid and liquid samples and reagents.'
+        id: 'button_histopaque',
+        text: 'Histopaque is a ready-to-use medium facilitates rapid recovery of viable lymphocytes and other mononuclear cells from small volumes of whole blood or bone marrow.'
     },
     {
-        id: 'button_petri_dish',
-        text: 'A petri dish is used to culture different types of cells, including bacteria and molds. It often contains a nutritional medium on which the cells can grow. A petri dish is a flat, shallow dish made of glass or plastic with a suitable lid.'
+        id: 'button_pbs',
+        text: 'Phosphate buffered saline (PBS) is a non-toxic solution used in many biological laboratories. Unlike water, PBS prevents cells rupturing or shrivelling up due to osmosis.'
+    },
+    {
+        id: 'button_centrifuge_tubes',
+        text: 'Centrifuge tubes are used to contain liquids during centrifugation, which separates the sample into its components by rapidly rotating it around a fixed axis.'
     },
     {
         id: 'button_pipette',
         text: 'A pipette (sometimes spelled as pipet) is a type of laboratory tool commonly used in chemistry and biology to transport a measured volume of liquid, often as a media dispenser.'        
     },
     {
-        id: 'button_12x10_well_plate',
-        text: 'Well plates enable scientists to store numerous samples in a structured manner. In chemistry labs, they might be used to house various solutions, reagents, or reaction mixtures to be tested or analyzed.'
+        id: 'button_vial',
+        text: 'Vials are typically used to store medicines or laboratory samples. Although vials are mainly found in the medical field, they are critical to the workflow in various settings, from law enforcement agencies to department stores.'
     },
     {
-        id: 'button_multi_channel_pipette',
-        text: 'Multi-channel pipettes function in the same way as single-channel pipettes, but they utilise multiple tips for measuring and dispensing equal amounts of liquid at once. Common setups are 8 or 12 channels but 4, 6, 16 and 48 channel sets are also available.'
+        id: 'button_glass_slide',
+        text: 'A glass slide is a thin, flat, rectangular piece of glass that is used as a platform for microscopic specimen observation. It is often used to hold objects for examination under a microscope.'
     }
 ];
 
