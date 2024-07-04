@@ -5,11 +5,11 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Growth 1',
-    '2. Growth 2',        
-    '3. Growth 3',
-    '4. Growth 4',
-    '5. Growth 5' ];
+    '1. Preparation of LB media',
+    '2. Pipette media into tubes',        
+    '3. Innoculate with E.coli and incubate at different temperatures',
+    '4. Create different pH conditions and innoculate',
+    '5. Record the absorbance' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
