@@ -15,7 +15,6 @@ var allProcedures = [
     '8. Innoculate with E.coli and incubate at different temperatures',
     '9. Create different pH conditions and innoculate',
     '10. Record the absorbance' ];
-];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
