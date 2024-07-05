@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 5}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 10}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -9,7 +9,13 @@ var allProcedures = [
     '2. Pipette media into tubes',        
     '3. Innoculate with E.coli and incubate at different temperatures',
     '4. Create different pH conditions and innoculate',
-    '5. Record the absorbance' ];
+    '5. Record the absorbance',
+    '6. Preparation of LB media',
+    '7. Pipette media into tubes',        
+    '8. Innoculate with E.coli and incubate at different temperatures',
+    '9. Create different pH conditions and innoculate',
+    '10. Record the absorbance' ];
+];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
