@@ -28,20 +28,16 @@ export var tooltips = [
         text: 'A pipette (sometimes spelled as pipet) is a type of laboratory tool commonly used in chemistry and biology to transport a measured volume of liquid, often as a media dispenser.'        
     },    
     {
-        id: 'button_multi_channel_pipette',
-        text: 'Multi-channel pipettes function in the same way as single-channel pipettes, but they utilise multiple tips for measuring and dispensing equal amounts of liquid at once. Common setups are 8 or 12 channels but 4, 6, 16 and 48 channel sets are also available.'
+        id: 'button_petri_dish',
+        text: 'A petri dish is used to culture different types of cells, including bacteria and molds. It often contains a nutritional medium on which the cells can grow. A petri dish is a flat, shallow dish made of glass or plastic with a suitable lid.'
     },
     {
-        id: 'button_eppendorf_tube',
-        text: 'Eppendorf Tubes are single-use tubes made from polypropylene for preparing, mixing, centrifuging, transporting and storing solid and liquid samples and reagents.'
+        id: 'button_T25_flask',
+        text: 'T25 flask is the smallest flask and has a surface area of 25 cm². It is suitable for small-scale experiments and is often used for seeding cells for subsequent expansion in larger flasks.'        
     },
     {
-        id: 'button_12x10_well_plate',
-        text: '96-well plate is a laboratory tool with 96 small wells in an 8x12 grid. It allows for simultaneous testing of multiple samples under the same conditions, facilitating efficient and organized data collection.'
-    },
-    {
-        id: 'button_LB_media',
-        text: 'Luria broth (LB) is the most commonly used growth medium for E. coli. It promotes fast growth and provides good plasmid yields, making it an excellent choice for most applications, especially small-scale plasmid preps.'
+        id: 'button_vial',
+        text: 'Vials are typically used to store medicines or laboratory samples. Although vials are mainly found in the medical field, they are critical to the workflow in various settings, from law enforcement agencies to department stores.'
     }
 ];
 
