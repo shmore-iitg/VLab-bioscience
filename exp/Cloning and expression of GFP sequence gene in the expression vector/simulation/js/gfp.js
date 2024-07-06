@@ -5,16 +5,16 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Preparation of LB media',
-    '2. Pipette media into tubes',        
-    '3. Innoculate with E.coli and incubate at different temperatures',
-    '4. Create different pH conditions and innoculate',
-    '5. Record the absorbance',
-    '6. Preparation of LB media',
-    '7. Pipette media into tubes',        
-    '8. Innoculate with E.coli and incubate at different temperatures',
-    '9. Create different pH conditions and innoculate',
-    '10. Record the absorbance' ];
+    '1. Discard media from the T-25 flask',
+    '2. Wash it with PBS twice',        
+    '3. Trypsinize and then add media',
+    '4. Seeding of cells in a dish',
+    '5. Add optimem into vials',
+    '6. Add P3000 , Optimem & plasmid into one vial and optimem and lipofectamine into another',
+    '7. Add lipofectamine to another',        
+    '8. Mix the two and icubate foe 20 minutes',
+    '9. Discard the media from dish and give optimem wash',
+    '10. Add the mix dropwise and incubate for 24 hours' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
