@@ -9,8 +9,8 @@ var allProcedures = [
     '2. Wash it with PBS twice',        
     '3. Trypsinize and then add media',
     '4. Seeding of cells in a dish',
-    '5. Add optimem into vials. Add P3000 , Optimem & plasmid into one vial and Optimem & lipofectamine into another. Add lipofectamine to another',        
-    '6. Mix the two and icubate foe 20 minutes',
+    '5. Add P3000, optimem & plasmid into one vial and Optimem & lipofectamine into another. Add lipofectamine to another',        
+    '6. Mix the two and icubate for 20 minutes',
     '7. Discard the media from dish and give optimem wash',
     '8. Add the mix dropwise and incubate for 24 hours' ];
 
