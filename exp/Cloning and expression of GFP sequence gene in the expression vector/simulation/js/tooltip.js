@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 export var tooltips = [
     {
+        id: 'button_flask',
+        text: 'Flasks can be used for making solutions or for holding, containing, collecting, or sometimes volumetrically measuring chemicals, samples, solutions, etc. for chemical reactions or other processes such as mixing, heating, cooling, dissolving, precipitation, boiling (as in distillation), or analysis.'
+    },
+    {
         id: 'button_pipette',
         text: 'A pipette (sometimes spelled as pipet) is a type of laboratory tool commonly used in chemistry and biology to transport a measured volume of liquid, often as a media dispenser.'        
     },    
