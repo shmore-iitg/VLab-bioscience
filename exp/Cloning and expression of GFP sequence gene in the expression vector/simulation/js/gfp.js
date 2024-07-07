@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 10}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 8}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -9,12 +9,10 @@ var allProcedures = [
     '2. Wash it with PBS twice',        
     '3. Trypsinize and then add media',
     '4. Seeding of cells in a dish',
-    '5. Add optimem into vials',
-    '6. Add P3000 , Optimem & plasmid into one vial and optimem and lipofectamine into another',
-    '7. Add lipofectamine to another',        
-    '8. Mix the two and icubate foe 20 minutes',
-    '9. Discard the media from dish and give optimem wash',
-    '10. Add the mix dropwise and incubate for 24 hours' ];
+    '5. Add optimem into vials. Add P3000 , Optimem & plasmid into one vial and Optimem & lipofectamine into another. Add lipofectamine to another',        
+    '6. Mix the two and icubate foe 20 minutes',
+    '7. Discard the media from dish and give optimem wash',
+    '8. Add the mix dropwise and incubate for 24 hours' ];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
