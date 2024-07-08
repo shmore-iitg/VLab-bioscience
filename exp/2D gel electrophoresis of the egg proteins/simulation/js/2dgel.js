@@ -1,15 +1,22 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 5}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 12}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Preparation of LB media',
-    '2. Pipette media into tubes',        
-    '3. Innoculate with E.coli and incubate at different temperatures',
-    '4. Create different pH conditions and innoculate',
-    '5. Record the absorbance' ];
+    '1. 2D gel electrophoresis of the egg proteins 1',
+    '2. 2D gel electrophoresis of the egg proteins 2',        
+    '3. 2D gel electrophoresis of the egg proteins 3',
+    '4. 2D gel electrophoresis of the egg proteins 4',
+    '5. 2D gel electrophoresis of the egg proteins 5',
+    '6. 2D gel electrophoresis of the egg proteins 6',        
+    '7. 2D gel electrophoresis of the egg proteins 7',
+    '8. 2D gel electrophoresis of the egg proteins 8',
+    '9. 2D gel electrophoresis of the egg proteins 9',
+    '10. 2D gel electrophoresis of the egg proteins 10',        
+    '11. 2D gel electrophoresis of the egg proteins 11',
+    '12. 2D gel electrophoresis of the egg proteins 12'];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';

@@ -38,10 +38,6 @@ export var tooltips = [
     {
         id: 'button_12x10_well_plate',
         text: '96-well plate is a laboratory tool with 96 small wells in an 8x12 grid. It allows for simultaneous testing of multiple samples under the same conditions, facilitating efficient and organized data collection.'
-    },
-    {
-        id: 'button_LB_media',
-        text: 'Luria broth (LB) is the most commonly used growth medium for E. coli. It promotes fast growth and provides good plasmid yields, making it an excellent choice for most applications, especially small-scale plasmid preps.'
     }
 ];
 
