@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 12}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 15}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -16,7 +16,10 @@ var allProcedures = [
     '9. 2D gel electrophoresis of the egg proteins 9',
     '10. 2D gel electrophoresis of the egg proteins 10',        
     '11. 2D gel electrophoresis of the egg proteins 11',
-    '12. 2D gel electrophoresis of the egg proteins 12'];
+    '12. 2D gel electrophoresis of the egg proteins 12',
+    '13. 2D gel electrophoresis of the egg proteins 13',        
+    '14. 2D gel electrophoresis of the egg proteins 14',
+    '15. 2D gel electrophoresis of the egg proteins 15'];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
