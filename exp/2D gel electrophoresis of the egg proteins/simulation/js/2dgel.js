@@ -5,21 +5,21 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. 2D gel electrophoresis of the egg proteins 1',
-    '2. 2D gel electrophoresis of the egg proteins 2',        
-    '3. 2D gel electrophoresis of the egg proteins 3',
-    '4. 2D gel electrophoresis of the egg proteins 4',
-    '5. 2D gel electrophoresis of the egg proteins 5',
-    '6. 2D gel electrophoresis of the egg proteins 6',        
-    '7. 2D gel electrophoresis of the egg proteins 7',
-    '8. 2D gel electrophoresis of the egg proteins 8',
-    '9. 2D gel electrophoresis of the egg proteins 9',
-    '10. 2D gel electrophoresis of the egg proteins 10',        
-    '11. 2D gel electrophoresis of the egg proteins 11',
-    '12. 2D gel electrophoresis of the egg proteins 12',
-    '13. 2D gel electrophoresis of the egg proteins 13',        
-    '14. 2D gel electrophoresis of the egg proteins 14',
-    '15. 2D gel electrophoresis of the egg proteins 15'];
+    '1. Load the Protein Sample on the Tray',
+    '2. Peel off the cover of the IPG strip and Place it gently over the sample',        
+    '3. Overlay with mineral oil to prevent evaporation',
+    '4. Transfer IPG strips to the Focusing tray',
+    '5. Wet the Vicks and put them at the end of the channels covering the electrodes',
+    '6. Add mineral oil, secure with combs and run IEF',        
+    '7. Pour Equilibration Buffer-I on the tray',
+    '8. Take out the IPG strip and place it on the Equilibration buffer-I',
+    '9. Place the tray on the slow rocker for about 10 min',
+    '10. Pour Equilibration buffer-II and transfer the IPG strips in it',        
+    '11. Heat Agarose and pour in the cast',
+    '12. Carefully transfer the IPG strips on top of the Gel',
+    '13. Fit the gel plate in the apparatus and Run the Gel',        
+    '14. Carefully remove the gel from the cast and put it in a staining solution',
+    '15. Put gel into destaining Solution and later visualize it in a Gel doc'];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
