@@ -14,7 +14,7 @@ var allProcedures = [
     '7. Cells are placed on a clean and dry microscopic glass slide',
     '8. Dye is added and incubated for 10 minutes',
     '9. The slide is rinsed thoroughly with PBS', 
-    '10. Latest new step - Avishi, please give me text' ]
+    '10. Visualize the cells under a microscope' ]
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
