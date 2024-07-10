@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 9}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 10}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -13,7 +13,8 @@ var allProcedures = [
     '6. Supernatant is discarded and bottom layer containing cells is collected',
     '7. Cells are placed on a clean and dry microscopic glass slide',
     '8. Dye is added and incubated for 10 minutes',
-    '9. The slide is rinsed thoroughly with PBS']
+    '9. The slide is rinsed thoroughly with PBS', 
+    '10. Latest new step - Avishi, please give me text' ]
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
