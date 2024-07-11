@@ -38,6 +38,22 @@ export var tooltips = [
     {
         id: 'button_12x10_well_plate',
         text: '96-well plate is a laboratory tool with 96 small wells in an 8x12 grid. It allows for simultaneous testing of multiple samples under the same conditions, facilitating efficient and organized data collection.'
+    },
+    {
+        id: 'button_electrofloresis_tank',
+        text: 'Need Usage for electrofloresis_tank'        
+    },    
+    {
+        id: 'button_IPG_Strip',
+        text: 'Need Usage for IPG_Strip.'
+    },
+    {
+        id: 'button_focusing_tray',
+        text: 'Need Usage for focusing_tray.'
+    },
+    {
+        id: 'button_tray',
+        text: 'Need Usage for tray.'
     }
 ];
 
