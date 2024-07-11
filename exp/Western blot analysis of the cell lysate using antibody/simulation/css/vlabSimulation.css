@@ -128,11 +128,11 @@
 }
 
 #tooltip-container .tooltip-column:first-child {
-    flex: 3; /* 30% */
+    flex: 40%;
 }
 
 #tooltip-container .tooltip-column:last-child {
-    flex: 7; /* 70% */
+    flex: 60%;
 }
 
 #tooltip-container .close-button {
