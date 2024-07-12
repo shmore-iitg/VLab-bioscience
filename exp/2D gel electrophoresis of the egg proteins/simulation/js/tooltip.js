@@ -41,19 +41,19 @@ export var tooltips = [
     },
     {
         id: 'button_electrofloresis_tank',
-        text: 'Need Usage for electrofloresis_tank'        
+        text: 'An electrophoresis tank is used to separate proteins, nucleic acids, or other molecules based on size and charge by applying an electric field. It is essential for DNA sequencing, protein analysis, and various biochemical research applications.'        
     },    
     {
         id: 'button_IPG_Strip',
-        text: 'Need Usage for IPG_Strip.'
+        text: 'IPG strips are used in the first dimension of 2D gel electrophoresis to separate proteins by isoelectric focusing based on their isoelectric point (pI), following rehydration and protein sample application.'
     },
     {
         id: 'button_focusing_tray',
-        text: 'Need Usage for focusing_tray.'
+        text: 'A focusing tray is used during isoelectric focusing with IPG strips. Place the rehydrated IPG strips in the tray, ensure proper contact with electrodes, and apply an electric field to separate proteins by their isoelectric point (pI) along the strips.'
     },
     {
         id: 'button_tray',
-        text: 'Need Usage for tray.'
+        text: 'A tray in 2D gel electrophoresis holds the IPG strips while rehydrating and putting in the Equilibriation buffers.'
     }
 ];
 
