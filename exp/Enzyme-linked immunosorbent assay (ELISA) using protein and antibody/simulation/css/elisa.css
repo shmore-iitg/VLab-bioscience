@@ -197,6 +197,13 @@
     width: 70%; 
 }
 
+/* Large screens */
+@media (min-width: 1024px) {
+    #main_container {
+        max-height: 90vh; 
+    }
+}
+
 /* Change to column on screens smaller than 600px */
 @media screen and (max-width: 600px) {
     #main_container,
