@@ -5,13 +5,20 @@ let currentProcedure = null;
 
 // Create an array of all procedures
 var allProcedures = [ 
-    '1. Supernatant Out',
-    '2. PBS wash',        
-    '3. Lysis',
-    '4. To Vial',
-    '5. Centrifuge',
-    '6. Supernatant again',
-    '7. Lysis again'];
+    '1. Remove the culture medium from the confluent cells',
+    '2. Wash the cells once with ice cold-PBS',        
+    '3. Add ice-cold IP Lysis/Wash Buffer to the cells. Incubate on ice for 5 minutes with periodic mixing.',
+    '4. Transfer the lysate to a microcentrifuge tube5.  Centrifuge at ~13,000 × g for 10 minutes to pellet the cell debris',
+    '5. Centrifuge at ~13,000 × g for 10 minutes to pellet the cell debris',
+    '6. Transfer supernatant to a new tube. Wash cells once by suspending the cell pellet in PBS',
+    '7. Add ice cold IP Lysis/Wash Buffer to the cell pellet',
+    '8. Place Pierce Protein A/G Magnetic Beads into a 1.5mL microcentrifuge tube. Add IP Lysis/Wash Buffer to the beads and gently vortex to mix. Place the tube into a magnetic stand to collect the beads against the side of the tube. Remove and discard the supernatant',
+    '9. Add the antigen sample/antibody mixture to the tube containing pre-washed magnetic beads and incubate at room temperature for 1 hour with mixing. Collect the beads with a magnetic stand, remove the unbound sample and save for analysis',
+    '10. Add 500µL of IP Lysis/Wash Buffer to the tube and gently mix. Collect the beads and discard the supernatant. Repeat this wash twice',
+    '11. Add 500µL of ultra pure water to the tube and gently mix. Collect the beads on a magnetic stand and discard the supernatant',
+    '12. Add Elution Buffer to the tube. Incubate the tube at RT with mixing for 10 minutes. Magnetically separate the beads and save the supernatant containing the target antigen',
+    '13. To neutralize the low pH, add of Neutralization Buffer for each of elute'
+];
 
 import { tooltips } from './tooltip.js';
 import { showTooltip } from './tooltip.js';
