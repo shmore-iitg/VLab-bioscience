@@ -22,7 +22,7 @@
         '1 ) Assemble the casting frame',
         '2 ) Lock the Gasket',
         '3 ) Mount the Gasket',
-        '4 ) Buffer Information appears',
+        '4 ) Buffer Information appears',        
         '5 ) Add Resolving Buffer to the Gasket',
         '6 ) Add a layer of Isopropanol',
         '7 ) Dispose of the Isopropanol after the gel has solidified',
@@ -196,42 +196,44 @@ var steps = [
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/4_Buffer_Info.json']
+        playing_content: ['simulation/json/Part_2_Steps/4_Buffer_Info_Show.json']
+    },
+    {
+        title: 'Step 2 : Gel Preparation',        
+        content_type: 'animation',
+        playing_content: [
+            'simulation/json/Part_2_Steps/5_Buffer_Info_Hide.json',
+            'simulation/json/Part_2_Steps/6_Resolving_Buffer.json']
     }, 
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/5_Resolving_Buffer.json']
+        playing_content: ['simulation/json/Part_2_Steps/7_Isopropanol.json']
     }, 
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/6_Isopropanol.json']
+        playing_content: ['simulation/json/Part_2_Steps/8_Dispose_Isopropanol.json']
     }, 
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/7_Dispose_Isopropanol.json']
+        playing_content: ['simulation/json/Part_2_Steps/9_Water_Clean.json']
     }, 
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/8_Water_Clean.json']
+        playing_content: ['simulation/json/Part_2_Steps/10_Water_Dispose.json']
     }, 
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/9_Water_Dispose.json']
+        playing_content: ['simulation/json/Part_2_Steps/11_Stacking Buffer_Add.json']
     }, 
     {
         title: 'Step 2 : Gel Preparation',        
         content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/10_Stacking Buffer_Add.json']
-    }, 
-    {
-        title: 'Step 2 : Gel Preparation',        
-        content_type: 'animation',
-        playing_content: ['simulation/json/Part_2_Steps/11_Comb_Gasket.json']
+        playing_content: ['simulation/json/Part_2_Steps/12_Comb_Gasket.json']
     },
     {
         title: 'Step 3 : SDS Page',        

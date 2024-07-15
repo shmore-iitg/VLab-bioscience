@@ -1,5 +1,5 @@
 let currentAnimation = 0;
-const animations = Array.from({length: 7}, (_, i) => `./simulation/json/Step_${i+1}.json`);
+const animations = Array.from({length: 14}, (_, i) => `./simulation/json/Step_${i+1}.json`);
 let animationInstance = null;
 let currentProcedure = null;
 
@@ -17,7 +17,8 @@ var allProcedures = [
     '10. Add 500µL of IP Lysis/Wash Buffer to the tube and gently mix. Collect the beads and discard the supernatant. Repeat this wash twice',
     '11. Add 500µL of ultra pure water to the tube and gently mix. Collect the beads on a magnetic stand and discard the supernatant',
     '12. Add Elution Buffer to the tube. Incubate the tube at RT with mixing for 10 minutes. Magnetically separate the beads and save the supernatant containing the target antigen',
-    '13. To neutralize the low pH, add of Neutralization Buffer for each of elute'
+    '13. To neutralize the low pH, add of Neutralization Buffer for each of elute',
+    '14. SDS-PAGE: Prepare the SDS-PAGE gel and set up the electrophoresis apparatus. Mix the eluate with SDS sample buffer and heat. Load the samples and a molecular weight marker onto the gel. Run the gel at an appropriate voltage until the dye front reaches the bottom. Analyze the gel to determine the presence and size of the target antigen'
 ];
 
 import { tooltips } from './tooltip.js';
